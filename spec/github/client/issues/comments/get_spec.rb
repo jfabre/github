@@ -32,8 +32,8 @@ describe Github::Client::Issues::Comments, '#get' do
 
     it "should get comment information" do
       comment = subject.get user, repo, comment_id
-      comment.user.id.should == comment_id
-      comment.user.login.should == 'octocat'
+      comment['user']['id'].should == comment_id
+      comment['user']['login'].should == 'octocat'
     end
 
     it "should return mash" do

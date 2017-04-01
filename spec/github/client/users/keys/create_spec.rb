@@ -40,7 +40,7 @@ describe Github::Client::Users::Keys, '#create' do
 
     it "should get the key information" do
       key = subject.create inputs
-      key.title.should == 'octocat@octomac'
+      key['title'].should == 'octocat@octomac'
     end
   end
 

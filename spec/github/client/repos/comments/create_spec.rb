@@ -49,7 +49,7 @@ describe Github::Client::Repos::Comments, '#create' do
 
     it "should get the commit comment information" do
       comment = subject.create user, repo, sha, inputs
-      comment.user.login.should == 'octocat'
+      comment['user']['login'].should == 'octocat'
     end
   end
 

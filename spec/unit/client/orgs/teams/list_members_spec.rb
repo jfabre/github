@@ -32,7 +32,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#list_members' do
 
     it "gets team members information" do
       teams = subject.list_members team_id
-      expect(teams.first.name).to eq('Owners')
+      expect(teams.first['name']).to eq('Owners')
     end
 
     it "yields to a block" do

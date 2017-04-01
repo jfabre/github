@@ -57,7 +57,7 @@ describe Github::Client::GitData::Trees, '#create' do
 
     it "should get the tree information" do
       tree_sha = subject.create user, repo, inputs
-      tree_sha.sha.should == sha
+      tree_sha['sha'].should == sha
     end
   end
 

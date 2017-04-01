@@ -41,7 +41,7 @@ RSpec.describe Github::Client::Gists, '#create' do
 
     it "gets the gist information" do
       gist = subject.create inputs
-      expect(gist.user.login).to eq('octocat')
+      expect(gist['user']['login']).to eq('octocat')
     end
   end
 

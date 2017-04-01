@@ -36,7 +36,7 @@ RSpec.describe Github::Client::Activity::Notifications, '#get' do
 
     it "should get repository information" do
       threads = subject.get thread_id
-      expect(threads.first.repository.name).to eq('Hello-World')
+      expect(threads.first['repository']['name']).to eq('Hello-World')
     end
 
     it "should yield repositories to a block" do

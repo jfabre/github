@@ -32,7 +32,7 @@ describe Github::Client::Activity::Events, '#network' do
 
     it "should get event information" do
       events = subject.network user, repo
-      expect(events.first.type).to eq('Event')
+      expect(events.first['type']).to eq('Event')
     end
 
     it "should yield to a block" do

@@ -31,37 +31,37 @@ RSpec.describe Github::Client::Activity::Feeds, '#list' do
 
     it "gets timeline url" do
       feeds = subject.list
-      expect(feeds.timeline_url).to eq('https://github.com/timeline')
+      expect(feeds['timeline_url']).to eq('https://github.com/timeline')
     end
 
     it "gest user url" do
       feeds = subject.list
-      expect(feeds.user_url).to eq('https://github.com/{user}')
+      expect(feeds['user_url']).to eq('https://github.com/{user}')
     end
 
     it "gets current user public url" do
       feeds = subject.list
-      expect(feeds.current_user_public_url).to eq('https://github.com/defunkt')
+      expect(feeds['current_user_public_url']).to eq('https://github.com/defunkt')
     end
 
     it "gets current user url" do
       feeds = subject.list
-      expect(feeds.current_user_url).to eq('https://github.com/defunkt.private?token=abc123')
+      expect(feeds['current_user_url']).to eq('https://github.com/defunkt.private?token=abc123')
     end
 
     it "gets current user actor url" do
       feeds = subject.list
-      expect(feeds.current_user_actor_url).to eq('https://github.com/defunkt.private.actor?token=abc123')
+      expect(feeds['current_user_actor_url']).to eq('https://github.com/defunkt.private.actor?token=abc123')
     end
 
     it "gets current user organization url" do
       feeds = subject.list
-      expect(feeds.current_user_organization_url).to eq('')
+      expect(feeds['current_user_organization_url']).to eq('')
     end
 
     it "gets current user public url" do
       feeds = subject.list
-      expect(feeds.current_user_organization_urls.first).to eq('https://github.com/organizations/github/defunkt.private.atom?token=abc123')
+      expect(feeds['current_user_organization_urls'].first).to eq('https://github.com/organizations/github/defunkt.private.atom?token=abc123')
     end
 
     it_should_behave_like 'request failure' do

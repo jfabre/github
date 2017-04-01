@@ -49,7 +49,7 @@ RSpec.describe Github::Client::Gists, '#edit' do
 
     it "gets the gist information" do
       gist = subject.edit gist_id, inputs
-      expect(gist.user.login).to eq('octocat')
+      expect(gist['user']['login']).to eq('octocat')
     end
   end
 

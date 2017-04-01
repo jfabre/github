@@ -34,7 +34,7 @@ describe Github::Client::Repos::Forks, '#create' do
 
     it "should get the fork information" do
       fork = subject.create user, repo, inputs
-      fork.name.should == 'Hello-World'
+      fork['name'].should == 'Hello-World'
     end
   end
 

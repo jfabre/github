@@ -32,7 +32,7 @@ describe Github::Client::Search, '#code' do
 
     it "should get information" do
       code = subject.code q: query
-      code.total_count.should == 104
+      code['total_count'].should == 104
     end
   end
 end

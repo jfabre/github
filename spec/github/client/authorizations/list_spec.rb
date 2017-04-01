@@ -36,7 +36,7 @@ RSpec.describe Github::Client::Authorizations, '#list' do
 
     it "should get authorization information" do
       authorizations = subject.list
-      authorizations.first.token.should == 'abc123'
+      authorizations.first['token'].should == 'abc123'
     end
 
     it "should yield to a block" do

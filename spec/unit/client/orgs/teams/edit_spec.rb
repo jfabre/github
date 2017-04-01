@@ -46,7 +46,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#edit' do
 
     it "gets the team information" do
       edited_team = subject.edit(team, inputs)
-      expect(edited_team.name).to eq('Owners')
+      expect(edited_team['name']).to eq('Owners')
     end
   end
 

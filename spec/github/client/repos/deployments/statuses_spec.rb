@@ -33,7 +33,7 @@ describe Github::Client::Repos::Deployments, '#statuses' do
 
     it "should get deployment information" do
       statuses = subject.statuses user, repo, id
-      statuses.first.sha.should == 'a9a5ad01cf26b646e6f95bf9e2d13a2a155b5c9b'
+      statuses.first['sha'].should == 'a9a5ad01cf26b646e6f95bf9e2d13a2a155b5c9b'
     end
 
     it "should yield to a block" do

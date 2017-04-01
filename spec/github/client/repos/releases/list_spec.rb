@@ -37,7 +37,7 @@ RSpec.describe Github::Client::Repos::Releases, '#list' do
 
     it "should get key information" do
       keys = subject.list owner, repo
-      expect(keys.first.tag_name).to eq 'v1.0.0'
+      expect(keys.first['tag_name']).to eq 'v1.0.0'
     end
 
     it "should yield to a block" do

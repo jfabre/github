@@ -33,7 +33,7 @@ describe Github::Client::Activity::Events, '#organization' do
 
     it "should get event information" do
       events = subject.organization org
-      expect(events.first.type).to eq('Event')
+      expect(events.first['type']).to eq('Event')
     end
 
     it "should yield to a block" do

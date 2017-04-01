@@ -29,7 +29,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#get' do
     it "gets team information" do
       team_res = subject.get(team)
       expect(team_res.id).to eq(1)
-      expect(team_res.name).to eq('Owners')
+      expect(team_res['name']).to eq('Owners')
     end
 
     it "should return mash" do

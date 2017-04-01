@@ -35,7 +35,7 @@ RSpec.describe Github::Client::Activity::Notifications, '#list' do
 
     it "should get resource information" do
       notifications = subject.list
-      expect(notifications.first.repository.name).to eq('Hello-World')
+      expect(notifications.first['repository']['name']).to eq('Hello-World')
     end
 
     it "should yield repositories to a block" do

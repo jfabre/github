@@ -38,7 +38,7 @@ describe Github::Client::Activity::Watching, '#list' do
 
   it "should get watcher information" do
     watchers = subject.list user, repo
-    expect(watchers.first.login).to eq('octocat')
+    expect(watchers.first['login']).to eq('octocat')
   end
 
   it_should_behave_like 'request failure' do

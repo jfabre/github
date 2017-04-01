@@ -41,7 +41,7 @@ RSpec.describe Github::Client::Gists::Comments, '#edit' do
 
     it "gets the comment information" do
       comment = subject.edit(gist_id, comment_id, inputs)
-      expect(comment.user.login).to eq('octocat')
+      expect(comment['user']['login']).to eq('octocat')
     end
   end
 

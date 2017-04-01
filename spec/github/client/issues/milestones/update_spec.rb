@@ -46,7 +46,7 @@ describe Github::Client::Issues::Milestones, '#update' do
 
     it "should get the milestone information" do
       milestone = subject.update user, repo, number, inputs
-      milestone.title.should == 'v1.0'
+      milestone['title'].should == 'v1.0'
     end
   end
 

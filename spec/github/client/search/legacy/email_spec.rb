@@ -28,7 +28,7 @@ describe Github::Client::Search::Legacy, '#email' do
 
     it "should get user information" do
       user = subject.email email: keyword
-      user.user.username.should == 'techno'
+      user['user']['username'].should == 'techno'
     end
   end
 end

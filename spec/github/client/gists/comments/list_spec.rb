@@ -34,7 +34,7 @@ RSpec.describe Github::Client::Gists::Comments, '#list' do
 
     it "gets gist information" do
       comments = subject.list gist_id
-      expect(comments.first.user.login).to eq('octocat')
+      expect(comments.first['user']['login']).to eq('octocat')
     end
 
     it "yields to a block" do

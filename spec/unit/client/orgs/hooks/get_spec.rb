@@ -32,7 +32,7 @@ RSpec.describe Github::Client::Orgs::Hooks, '#get' do
     it "gets hook information" do
       hook = subject.get(org, hook_id)
       expect(hook.id).to eq(hook_id)
-      expect(hook.name).to eq('web')
+      expect(hook['name']).to eq('web')
     end
 
     it "returns response wrapper" do

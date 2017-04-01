@@ -53,7 +53,7 @@ describe Github::Client::GitData::Blobs, '#create' do
 
     it "should get the blob information" do
       blob_sha = subject.create user, repo, inputs
-      blob_sha.sha.should == sha
+      blob_sha['sha'].should == sha
     end
   end
 

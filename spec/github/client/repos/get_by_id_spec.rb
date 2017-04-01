@@ -35,7 +35,7 @@ describe Github::Client::Repos, '#get_by_id' do
 
     it "should get repository information" do
       repository = subject.get_by_id repo_id
-      repository.name.should == 'Hello-World'
+      repository['name'].should == 'Hello-World'
     end
   end
 

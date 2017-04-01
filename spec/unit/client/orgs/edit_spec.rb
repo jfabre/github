@@ -42,7 +42,7 @@ RSpec.describe Github::Client::Orgs, '#edit' do
 
     it "retrieves information" do
       organisation = subject.edit org
-      expect(organisation.name).to eq('github')
+      expect(organisation['name']).to eq('github')
     end
   end
 

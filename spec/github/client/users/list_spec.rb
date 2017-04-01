@@ -29,7 +29,7 @@ describe Github::Client::Users, '#list' do
 
     it "should get keys information" do
       users = subject.list
-      users.first.login.should == 'octocat'
+      users.first['login'].should == 'octocat'
     end
 
     it "should yield to a block" do

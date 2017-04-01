@@ -40,7 +40,7 @@ describe Github::Client::Repos, '#get' do
 
     it "should get repository information" do
       repository = subject.get user, repo
-      repository.name.should == 'Hello-World'
+      repository['name'].should == 'Hello-World'
     end
   end
 

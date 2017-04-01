@@ -36,7 +36,7 @@ describe Github::Client::Repos::Statuses, '#list' do
 
     it "should get status information" do
       statuses = subject.list user, repo, sha
-      statuses.first.state.should == 'success'
+      statuses.first['state'].should == 'success'
     end
 
     it "should yield to a block" do

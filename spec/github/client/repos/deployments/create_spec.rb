@@ -43,7 +43,7 @@ describe Github::Client::Repos::Deployments, '#create' do
 
     it "should get the deployment information" do
       deployment = subject.create user, repo, params
-      deployment.environment.should == 'production'
+      deployment['environment'].should == 'production'
     end
   end
 

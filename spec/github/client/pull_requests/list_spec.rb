@@ -37,7 +37,7 @@ RSpec.describe Github::Client::PullRequests, '#list' do
 
     it "gets pull request information" do
       pull_requests = subject.list user, repo, inputs
-      expect(pull_requests.first.title).to eq('new-feature')
+      expect(pull_requests.first['title']).to eq('new-feature')
     end
 
     it "yields to a block" do

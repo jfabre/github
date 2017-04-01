@@ -37,7 +37,7 @@ RSpec.describe Github::Client::Repos::Releases, '#create' do
 
     it "gets the key information back" do
       release = subject.create(owner, repo, tag_name: 'v1.0.0')
-      expect(release.tag_name).to eq(tag)
+      expect(release['tag_name']).to eq(tag)
     end
   end
 

@@ -49,7 +49,7 @@ describe Github::Client::Repos::Merging, '#merge' do
 
     it "should get the commit comment information" do
       merge = subject.merge user, repo, inputs
-      merge.commit.author.login.should == 'octocat'
+      merge['commit']['author']['login'].should == 'octocat'
     end
   end
 

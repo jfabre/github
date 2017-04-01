@@ -30,6 +30,6 @@ describe Github::Client::Repos::Contents, '#get' do
 
   it "should get repository information" do
     content = subject.get user, repo, path
-    content.name.should == 'README.md'
+    content['name'].should == 'README.md'
   end
 end

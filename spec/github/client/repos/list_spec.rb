@@ -41,12 +41,12 @@ describe Github::Client::Repos, '#list' do
 
     it "should return array of resources sorted by pushed_at time" do
       repositories = subject.list(:sort => 'pushed')
-      repositories.first.name.should == "Hello-World-2"
+      repositories.first['name'].should == "Hello-World-2"
     end
 
     it "should get resource information" do
       repositories = subject.list
-      repositories.first.name.should == 'Hello-World'
+      repositories.first['name'].should == 'Hello-World'
     end
 
     it "should yield result to a block" do

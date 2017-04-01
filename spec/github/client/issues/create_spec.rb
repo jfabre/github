@@ -49,7 +49,7 @@ describe Github::Client::Issues, '#create' do
 
     it "should get the issue information" do
       issue = subject.create(user, repo, inputs)
-      issue.title.should == 'Found a bug'
+      issue['title'].should == 'Found a bug'
     end
   end
 

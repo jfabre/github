@@ -23,7 +23,7 @@ RSpec.describe Github::Client::Orgs::Memberships, '#edit' do
 
   it 'should create organization membership with role member' do
     response = subject.edit(orgname, state: 'active')
-    expect(response.role).to eq('admin')
+    expect(response['role']).to eq('admin')
   end
 
   it "failse without role option" do

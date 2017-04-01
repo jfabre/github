@@ -49,7 +49,7 @@ describe Github::Client::Repos, '#edit' do
 
     it "should be able to retrieve information" do
       repository = subject.edit user, repo, inputs
-      repository.name.should == 'Hello-World'
+      repository['name'].should == 'Hello-World'
     end
   end
 

@@ -32,7 +32,7 @@ describe Github::Client::GitData::Trees, '#get' do
 
     it "should get tree information" do
       tree = subject.get user, repo, sha
-      tree.sha.should eql sha
+      tree['sha'].should eql sha
     end
 
     it "should return response wrapper" do
@@ -53,7 +53,7 @@ describe Github::Client::GitData::Trees, '#get' do
 
     it "should get tree information" do
       tree = subject.get user, repo, sha, 'recursive' => true
-      tree.sha.should eql sha
+      tree['sha'].should eql sha
     end
 
     it "should return response wrapper" do

@@ -31,7 +31,7 @@ describe Github::Client::Issues::Assignees, '#list' do
 
     it "should get collaborator information" do
       assignees = subject.list user, repo
-      assignees.first.login.should == 'octocat'
+      assignees.first['login'].should == 'octocat'
     end
 
     it "should yield to a block" do

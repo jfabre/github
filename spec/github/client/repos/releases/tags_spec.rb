@@ -32,7 +32,7 @@ RSpec.describe Github::Client::Repos::Releases::Tags, '#get' do
 
     it "should get tag_name information" do
       release = subject.get owner, repo, tag
-      expect(release.tag_name).to eq tag
+      expect(release['tag_name']).to eq tag
     end
   end
 

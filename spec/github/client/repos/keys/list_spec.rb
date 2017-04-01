@@ -37,7 +37,7 @@ describe Github::Client::Repos::Keys, '#list' do
 
     it "should get key information" do
       keys = subject.list user, repo
-      keys.first.title.should == 'octocat@octomac'
+      keys.first['title'].should == 'octocat@octomac'
     end
 
     it "should yield to a block" do

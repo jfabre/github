@@ -34,8 +34,8 @@ describe Github::Client::Issues::Events, '#list' do
 
     it "should get event information" do
       event = subject.get user, repo, event_id
-      event.actor.id.should == event_id
-      event.actor.login.should == 'octocat'
+      event['actor']['id'].should == event_id
+      event['actor']['login'].should == 'octocat'
     end
 
     it "should return mash" do

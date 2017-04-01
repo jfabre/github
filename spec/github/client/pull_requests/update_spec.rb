@@ -44,7 +44,7 @@ RSpec.describe Github::Client::PullRequests, '#update' do
 
     it "should get the pull_request information" do
       pull_request = subject.update user, repo, number, inputs
-      expect(pull_request.title).to eq('new-feature')
+      expect(pull_request['title']).to eq('new-feature')
     end
   end
 

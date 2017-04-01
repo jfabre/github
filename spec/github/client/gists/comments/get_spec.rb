@@ -32,7 +32,7 @@ RSpec.describe Github::Client::Gists::Comments, '#get' do
     it "gets comment information" do
       comment = subject.get gist_id, comment_id
       expect(comment.id).to eq comment_id
-      expect(comment.user.login).to eq('octocat')
+      expect(comment['user']['login']).to eq('octocat')
     end
 
     it "returns response wrapper" do

@@ -37,7 +37,7 @@ describe Github::Client::Repos::Forks, '#list' do
 
     it "should get fork information" do
       forks = subject.list user, repo
-      forks.first.name.should == 'Hello-World'
+      forks.first['name'].should == 'Hello-World'
     end
 
     it "should yield to a block" do

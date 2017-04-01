@@ -36,7 +36,7 @@ describe Github::Client::Issues::Comments, '#list' do
 
     it "should get issue comment information" do
       comments = subject.list user, repo, :number => number
-      comments.first.user.login.should == 'octocat'
+      comments.first['user']['login'].should == 'octocat'
     end
 
     it "should yield to a block" do
@@ -66,7 +66,7 @@ describe Github::Client::Issues::Comments, '#list' do
 
     it "should get issue comment information" do
       comments = subject.list user, repo
-      comments.first.user.login.should == 'octocat'
+      comments.first['user']['login'].should == 'octocat'
     end
 
     it "should yield to a block" do

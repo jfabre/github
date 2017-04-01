@@ -81,7 +81,7 @@ module Github
       if self.body.is_a?(Array)
         self.body[key]
       else
-        self.body.send(:"#{key}")
+        self.body[key]
       end
     end
 

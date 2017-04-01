@@ -36,7 +36,7 @@ describe Github::Client::Issues::Labels, '#list' do
 
     it "should get issue information" do
       labels = subject.list user, repo
-      labels.first.name.should == 'bug'
+      labels.first['name'].should == 'bug'
     end
 
     it "should yield to a block" do
@@ -63,7 +63,7 @@ describe Github::Client::Issues::Labels, '#list' do
 
     it "should get issue information" do
       labels = subject.list user, repo, :milestone_id => milestone_id
-      labels.first.name.should == 'bug'
+      labels.first['name'].should == 'bug'
     end
 
     it "should yield to a block" do
@@ -86,7 +86,7 @@ describe Github::Client::Issues::Labels, '#list' do
 
     it "should get issue information" do
       labels = subject.list user, repo, :issue_id => issue_id
-      labels.first.name.should == 'bug'
+      labels.first['name'].should == 'bug'
     end
 
     it "should yield to a block" do

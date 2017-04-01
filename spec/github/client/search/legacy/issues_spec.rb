@@ -33,7 +33,7 @@ describe Github::Client::Search::Legacy, '#issues' do
 
     it "should get repository information" do
       issues = subject.issues owner: owner, repo: repo, state: state, keyword: keyword
-      issues.issues.first.user.should == 'ckarbass'
+      issues['issues'].first['user'].should == 'ckarbass'
     end
   end
 end

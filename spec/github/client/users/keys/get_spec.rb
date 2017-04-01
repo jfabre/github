@@ -34,7 +34,7 @@ describe Github::Client::Users::Keys, '#get' do
     it "should get public key information" do
       key = subject.get key_id
       key.id.should == key_id
-      key.title.should == 'octocat@octomac'
+      key['title'].should == 'octocat@octomac'
     end
 
     it "should return mash" do

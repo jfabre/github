@@ -57,7 +57,7 @@ describe Github::Client::Repos::Hooks, '#create' do
 
     it "should get the hook information" do
       hook = subject.create user, repo, inputs
-      hook.name.should == 'web'
+      hook['name'].should == 'web'
     end
   end
 

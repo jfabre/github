@@ -36,7 +36,7 @@ RSpec.describe Github::Client::PullRequests::Comments, '#get' do
     it "gets comment information" do
       comment = subject.get user, repo, number
       expect(comment.id).to eq number
-      expect(comment.user.login).to eq('octocat')
+      expect(comment['user']['login']).to eq('octocat')
     end
 
     it "returns response wrapper" do

@@ -43,7 +43,7 @@ describe Github::Client::Repos::Deployments, '#create_status' do
 
     it "should get the deployment information" do
       status = subject.create_status user, repo, id, params
-      status.state.should == 'success'
+      status['state'].should == 'success'
     end
   end
 

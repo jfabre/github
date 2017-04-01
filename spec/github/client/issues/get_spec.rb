@@ -32,8 +32,8 @@ describe Github::Client::Issues, '#get' do
 
     it "should get issue information" do
       issue = subject.get user, repo, issue_id
-      issue.number.should == issue_id
-      issue.title.should == 'Found a bug'
+      issue['number'].should == issue_id
+      issue['title'].should == 'Found a bug'
     end
 
     it "should return mash" do

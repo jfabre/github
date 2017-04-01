@@ -31,7 +31,7 @@ RSpec.describe Github::Client::Gists, '#fork' do
 
   it "gets the gist information" do
     gist = subject.fork gist_id
-    expect(gist.user.login).to eq('octocat')
+    expect(gist['user']['login']).to eq('octocat')
   end
 
   it_should_behave_like 'request failure' do

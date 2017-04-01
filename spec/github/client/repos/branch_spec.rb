@@ -31,7 +31,7 @@ describe Github::Client::Repos, '#branch' do
 
     it "should get repository branch information" do
       repo_branch = subject.branch user, repo, branch
-      repo_branch.name.should == 'master'
+      repo_branch['name'].should == 'master'
     end
   end
 

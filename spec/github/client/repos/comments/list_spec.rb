@@ -37,7 +37,7 @@ describe Github::Client::Repos::Comments, '#list' do
 
       it "should get commit comment information" do
         repo_comments = subject.list user, repo
-        repo_comments.first.user.login.should == 'octocat'
+        repo_comments.first['user']['login'].should == 'octocat'
       end
 
       it "should yield to a block" do
@@ -77,7 +77,7 @@ describe Github::Client::Repos::Comments, '#list' do
 
       it "should get commit comment information" do
         commit_comments = subject.list user, repo, :sha => sha
-        commit_comments.first.user.login.should == 'octocat'
+        commit_comments.first['user']['login'].should == 'octocat'
       end
 
       it "should yield to a block" do

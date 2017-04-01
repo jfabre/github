@@ -34,7 +34,7 @@ describe Github::Client::Activity::Events, '#issue' do
 
     it "should get event information" do
       events = subject.issue user, repo
-      expect(events.first.type).to eq('Event')
+      expect(events.first['type']).to eq('Event')
     end
 
     it "should yield to a block" do

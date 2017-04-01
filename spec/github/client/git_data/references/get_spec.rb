@@ -40,12 +40,12 @@ describe Github::Client::GitData::References, '#get' do
 
     it "should get reference information" do
       reference = subject.get user, repo, ref
-      reference.first.ref.should eql "refs/heads/sc/featureA"
+      reference.first['ref'].should eql "refs/heads/sc/featureA"
     end
 
     it "should return mash" do
       reference = subject.get user, repo, ref
-      reference.first.should be_a Hashie::Mash
+      reference.first.should be_a Hash
     end
   end
 

@@ -61,7 +61,7 @@ RSpec.describe Github::Client::Orgs::Hooks, '#edit' do
 
     it "retrieve information" do
       hook = subject.edit(org, hook_id, inputs)
-      expect(hook.name).to eq('web')
+      expect(hook['name']).to eq('web')
     end
   end
 

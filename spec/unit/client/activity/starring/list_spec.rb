@@ -43,7 +43,7 @@ RSpec.describe Github::Client::Activity::Starring, '#list' do
 
     it "gets watcher information" do
       stargazers = subject.list user, repo
-      expect(stargazers.first.login).to eq('octocat')
+      expect(stargazers.first['login']).to eq('octocat')
     end
   end
 

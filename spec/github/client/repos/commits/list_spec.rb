@@ -35,7 +35,7 @@ describe Github::Client::Repos::Commits, '#list' do
 
     it "should get commit information" do
       commits = subject.list user, repo
-      commits.first.author.name.should == 'Scott Chacon'
+      commits.first['author']['name'].should == 'Scott Chacon'
     end
 
     it "should yield to a block" do

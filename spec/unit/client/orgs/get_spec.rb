@@ -28,7 +28,7 @@ RSpec.describe Github::Client::Orgs, '#get' do
     it "gets org information" do
       organisation = subject.get org
       expect(organisation.id).to eq(1)
-      expect(organisation.login).to eq('github')
+      expect(organisation['login']).to eq('github')
     end
 
     it "returns response wrapper" do

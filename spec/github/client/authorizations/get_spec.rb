@@ -31,7 +31,7 @@ RSpec.describe Github::Client::Authorizations, '#get' do
     it "should get authorization information" do
       authorization = subject.get authorization_id
       authorization.id.should == authorization_id
-      authorization.token.should == 'abc123'
+      authorization['token'].should == 'abc123'
     end
 
     it "should return mash" do

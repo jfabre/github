@@ -34,7 +34,7 @@ RSpec.describe Github::Client::PullRequests, '#files' do
 
     it "should get pull request information" do
       pull_requests = subject.files user, repo, number
-      expect(pull_requests.first.filename).to eq('file1.txt')
+      expect(pull_requests.first['filename']).to eq('file1.txt')
     end
 
     it "should yield to a block" do

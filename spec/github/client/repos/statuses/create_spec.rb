@@ -45,7 +45,7 @@ describe Github::Client::Repos::Statuses, '#create' do
 
     it "should get the status information" do
       status = subject.create user, repo, sha, inputs
-      status.state.should == 'success'
+      status['state'].should == 'success'
     end
   end
 

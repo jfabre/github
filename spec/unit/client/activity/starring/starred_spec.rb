@@ -46,8 +46,8 @@ RSpec.describe Github::Client::Activity::Starring, '#starred' do
 
     it "should get starred information" do
       starred = subject.starred
-      expect(starred.first.name).to eq('Hello-World')
-      expect(starred.first.owner.login).to eq('octocat')
+      expect(starred.first['name']).to eq('Hello-World')
+      expect(starred.first['owner']['login']).to eq('octocat')
     end
   end
 end # starred

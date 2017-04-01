@@ -37,7 +37,7 @@ describe Github::Client::Repos::Hooks, '#list' do
 
     it "should get hook information" do
       hooks = subject.list user, repo
-      hooks.first.name.should == 'web'
+      hooks.first['name'].should == 'web'
     end
 
     it "should yield to a block" do

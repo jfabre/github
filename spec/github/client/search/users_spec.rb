@@ -32,7 +32,7 @@ describe Github::Client::Search, '#users' do
 
     it "should get information" do
       code = subject.users q: query
-      code.total_count.should == 12
+      code['total_count'].should == 12
     end
   end
 end

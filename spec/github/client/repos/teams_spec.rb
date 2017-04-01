@@ -39,7 +39,7 @@ describe Github::Client::Repos, '#teams' do
 
     it "should get branch information" do
       teams = subject.teams user, repo
-      teams.first.name.should == 'Owners'
+      teams.first['name'].should == 'Owners'
     end
 
     it "should yield to a block" do

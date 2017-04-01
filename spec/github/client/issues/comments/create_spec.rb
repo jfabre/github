@@ -39,7 +39,7 @@ describe Github::Client::Issues::Comments, '#create' do
 
     it "should get the comment information" do
       comment = subject.create user, repo, number, inputs
-      comment.user.login.should == 'octocat'
+      comment['user']['login'].should == 'octocat'
     end
   end
 

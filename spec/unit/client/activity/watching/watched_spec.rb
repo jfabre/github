@@ -46,7 +46,7 @@ describe Github::Client::Activity::Watching, '#watched' do
 
     it "should get watched information" do
       watched = subject.watched
-      expect(watched.first.name).to eq('Hello-World')
+      expect(watched.first['name']).to eq('Hello-World')
     end
   end
 end # watched

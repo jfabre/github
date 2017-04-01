@@ -52,7 +52,7 @@ RSpec.describe Github::Client::Orgs::Hooks, '#create' do
 
     it "gets the hook information" do
       hook = subject.create org, inputs
-      expect(hook.name).to eq('web')
+      expect(hook['name']).to eq('web')
     end
   end
 

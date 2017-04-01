@@ -78,12 +78,12 @@ describe Github::Client::GitData::References, '#list' do
 
     it "should be a mash type" do
       references = subject.list user, repo, :ref => ref
-      references.first.should be_a Hashie::Mash
+      references.first.should be_a Hash
     end
 
     it "should get reference information" do
       references = subject.list user, repo, :ref => ref
-      references.first.ref.should eql 'refs/heads/master'
+      references.first['ref'].should eql 'refs/heads/master'
     end
 
     it "should yield to a block" do

@@ -28,7 +28,7 @@ RSpec.describe Github::Client::PullRequests, '#merge' do
 
     it 'response contains merge success flag' do
       response = subject.merge(user, repo, number)
-      expect(response.merged).to be_true
+      expect(response['merged']).to be_true
     end
   end
 

@@ -8,8 +8,8 @@ shared_examples_for 'an array of resources' do
     objects.should have(1).items
   end
 
-  it "should be a mash type" do
+  it "should be a Hash type" do
     objects = requestable
-    objects.first.should be_a Hashie::Mash
+    objects.first.should be_a Hash
   end
 end

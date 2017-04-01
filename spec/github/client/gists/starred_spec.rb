@@ -27,7 +27,7 @@ RSpec.describe Github::Client::Gists, '#starred' do
 
     it "gets gist information" do
       gists = subject.starred
-      expect(gists.first.user.login).to eq('octocat')
+      expect(gists.first['user']['login']).to eq('octocat')
     end
 
     it "yields to a block" do

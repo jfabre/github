@@ -27,7 +27,7 @@ RSpec.describe Github::Client::Repos::Keys, '#create' do
 
     it "should get the key information back" do
       key = subject.create(user, repo, inputs)
-      expect(key.title).to eq('octocat@octomac')
+      expect(key['title']).to eq('octocat@octomac')
     end
   end
 

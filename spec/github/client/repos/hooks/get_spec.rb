@@ -33,7 +33,7 @@ describe Github::Client::Repos::Hooks, '#get' do
     it "should get hook information" do
       hook = subject.get user, repo, hook_id
       hook.id.should == hook_id
-      hook.name.should == 'web'
+      hook['name'].should == 'web'
     end
 
     it "should return mash" do

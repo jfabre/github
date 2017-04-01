@@ -66,7 +66,7 @@ describe Github::Client::Repos::Hooks, '#edit' do
 
     it "should be able to retrieve information" do
       hook = subject.edit user, repo, hook_id, inputs
-      hook.name.should == 'web'
+      hook['name'].should == 'web'
     end
   end
 

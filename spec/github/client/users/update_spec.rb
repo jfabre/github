@@ -45,7 +45,7 @@ describe Github::Client::Users, '#update' do
 
     it "should get the resource information" do
       user_resource = subject.update inputs
-      user_resource.login.should == 'octocat'
+      user_resource['login'].should == 'octocat'
     end
   end
 

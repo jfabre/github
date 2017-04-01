@@ -31,7 +31,7 @@ describe Github::Client::Users, '#get' do
 
     it "should get org information" do
       user_resource = subject.get :user => user
-      user_resource.login.should == 'octocat'
+      user_resource['login'].should == 'octocat'
     end
   end
 

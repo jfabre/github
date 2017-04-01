@@ -50,7 +50,7 @@ describe Github::Client::Issues::Labels, '#update' do
 
     it "should get the label information" do
       label = subject.update user, repo, label_id, inputs
-      label.name.should == 'bug'
+      label['name'].should == 'bug'
     end
   end
 

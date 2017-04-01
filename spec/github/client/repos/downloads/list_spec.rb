@@ -38,7 +38,7 @@ describe Github::Client::Repos::Downloads, '#list' do
 
     it "should get download information" do
       downloads = subject.list user, repo
-      downloads.first.name.should == 'new_file.jpg'
+      downloads.first['name'].should == 'new_file.jpg'
     end
 
     it "should yield to a block" do

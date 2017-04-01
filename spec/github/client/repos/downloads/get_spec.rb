@@ -36,7 +36,7 @@ describe Github::Client::Repos::Downloads, '#get' do
     it "should get download information" do
       download = subject.get user, repo, download_id
       download.id.should == download_id
-      download.name.should == 'new_file.jpg'
+      download['name'].should == 'new_file.jpg'
     end
 
     it "should return mash" do

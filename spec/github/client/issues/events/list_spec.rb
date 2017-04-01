@@ -40,7 +40,7 @@ describe Github::Client::Issues::Events, '#list' do
 
       it "should get issue information" do
         events = subject.list user, repo
-        events.first.actor.login.should == 'octocat'
+        events.first['actor']['login'].should == 'octocat'
       end
 
       it "should yield to a block" do
@@ -72,7 +72,7 @@ describe Github::Client::Issues::Events, '#list' do
 
       it "should get issue information" do
         events = subject.list user, repo, :issue_number => issue_number
-        events.first.actor.login.should == 'octocat'
+        events.first['actor']['login'].should == 'octocat'
       end
 
       it "should yield to a block" do

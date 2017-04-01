@@ -38,7 +38,7 @@ RSpec.describe Github::Client::Authorizations::App, '#create' do
 
     it "gets the authorization information" do
       authorization = subject.create client_id
-      authorization.token.should == 'abc123'
+      authorization['token'].should == 'abc123'
     end
   end
 end # create

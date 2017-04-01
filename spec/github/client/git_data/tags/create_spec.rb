@@ -48,7 +48,7 @@ describe Github::Client::GitData::Tags, '#create' do
 
     it "should get the tag information" do
       tag = subject.create user, repo, inputs
-      tag.sha.should == sha
+      tag['sha'].should == sha
     end
   end
 

@@ -46,12 +46,12 @@ describe Github::Client::GitData::References, '#update' do
 
     it "should return the resource" do
       reference = subject.update user, repo, ref, inputs
-      reference.first.should be_a Hashie::Mash
+      reference.first.should be_a Hash
     end
 
     it "should get the reference information" do
       reference = subject.update user, repo, ref, inputs
-      reference.first.ref.should eql 'refs/heads/sc/featureA'
+      reference.first['ref'].should eql 'refs/heads/sc/featureA'
     end
   end
 

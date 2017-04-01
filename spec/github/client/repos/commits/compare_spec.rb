@@ -31,6 +31,6 @@ describe Github::Client::Repos::Commits, '#compare' do
 
   it "should get comparison information" do
     commit = subject.compare user, repo, base, head
-    commit.base_commit.commit.author.name.should == 'Monalisa Octocat'
+    commit['base_commit']['commit']['author']['name'].should == 'Monalisa Octocat'
   end
 end # compare

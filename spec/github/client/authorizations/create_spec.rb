@@ -43,7 +43,7 @@ describe Github::Client::Authorizations, '#create' do
 
     it "gets the authorization information" do
       authorization = subject.create inputs
-      authorization.token.should == 'abc123'
+      authorization['token'].should == 'abc123'
     end
   end
 

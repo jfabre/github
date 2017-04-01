@@ -37,7 +37,7 @@ describe Github::Client::Repos, '#branches' do
 
     it "should get branch information" do
       branches = subject.branches user, repo
-      branches.first.name.should == 'master'
+      branches.first['name'].should == 'master'
     end
 
     it "should yield to a block" do

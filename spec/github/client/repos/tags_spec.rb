@@ -39,7 +39,7 @@ describe Github::Client::Repos, '#tags' do
 
     it "should get tag information" do
       tags = subject.tags user, repo
-      tags.first.name.should == 'v0.1'
+      tags.first['name'].should == 'v0.1'
     end
 
     it "should yield to a block" do

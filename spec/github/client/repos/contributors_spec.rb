@@ -43,7 +43,7 @@ describe Github::Client::Repos, '#contributors' do
 
     it "should get branch information" do
       contributors = subject.contributors user, repo
-      contributors.first.login.should == 'octocat'
+      contributors.first['login'].should == 'octocat'
     end
 
     it "should yield to a block" do

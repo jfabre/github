@@ -36,7 +36,7 @@ describe Github::Client::Repos::Comments, '#get' do
 
     it "should get commit comment information" do
       commit_comment = subject.get user, repo, comment_id
-      commit_comment.user.login.should == 'octocat'
+      commit_comment['user']['login'].should == 'octocat'
     end
 
     it "should return mash" do

@@ -29,7 +29,7 @@ describe Github::Client::Issues, '#list' do
 
     it "should get issue information" do
       issues = subject.list
-      issues.first.title.should == 'Found a bug'
+      issues.first['title'].should == 'Found a bug'
     end
 
     it "should yield to a block" do
@@ -79,7 +79,7 @@ describe Github::Client::Issues, '#list' do
 
     it "should get repository issue information" do
       repo_issues = subject.list :user => user, :repo => repo
-      repo_issues.first.title.should == 'Found a bug'
+      repo_issues.first['title'].should == 'Found a bug'
     end
 
     it "should yield to a block" do

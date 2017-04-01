@@ -28,7 +28,7 @@ RSpec.describe Github::Client::Orgs, '#list' do
 
     it "gets org information" do
       orgs = subject.list(user: user)
-      expect(orgs.first.login).to eq('github')
+      expect(orgs.first['login']).to eq('github')
     end
 
     it "yields to a block" do

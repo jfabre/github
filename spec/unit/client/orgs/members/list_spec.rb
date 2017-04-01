@@ -34,7 +34,7 @@ RSpec.describe Github::Client::Orgs::Members, '#list' do
 
     it "gets members information" do
       members = subject.list(org)
-      expect(members.first.login).to eq('octocat')
+      expect(members.first['login']).to eq('octocat')
     end
 
     it "yields to a block" do
@@ -66,7 +66,7 @@ RSpec.describe Github::Client::Orgs::Members, '#list' do
 
     it "gets public_members information" do
       public_members = subject.list(org, public: true)
-      expect(public_members.first.login).to eq('octocat')
+      expect(public_members.first['login']).to eq('octocat')
     end
 
     it "yields to a block" do

@@ -36,6 +36,6 @@ describe Github::Client::Repos::Contents, '#create' do
 
   it "gets repository contents information" do
     content = subject.create user, repo, path, params
-    content.content.name.should == 'hello.txt'
+    content['content']['name'].should == 'hello.txt'
   end
 end

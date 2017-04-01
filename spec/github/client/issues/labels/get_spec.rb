@@ -32,7 +32,7 @@ describe Github::Client::Issues::Labels, '#get' do
 
     it "should get label information" do
       label = subject.get user, repo, label_name
-      label.name.should == 'bug'
+      label['name'].should == 'bug'
     end
 
     it "should return mash" do

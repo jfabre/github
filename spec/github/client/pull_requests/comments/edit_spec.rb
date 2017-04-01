@@ -40,7 +40,7 @@ RSpec.describe Github::Client::PullRequests::Comments, '#edit' do
 
     it "should get the comment information" do
       comment = subject.edit(user, repo, number, inputs)
-      expect(comment.user.login).to eq('octocat')
+      expect(comment['user']['login']).to eq('octocat')
     end
   end
 

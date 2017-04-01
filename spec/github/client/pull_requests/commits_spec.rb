@@ -34,7 +34,7 @@ RSpec.describe Github::Client::PullRequests, '#commits' do
 
     it "should get pull request information" do
       pull_requests = subject.commits user, repo, number
-      expect(pull_requests.first.committer.name).to eq('Scott Chacon')
+      expect(pull_requests.first['committer']['name']).to eq('Scott Chacon')
     end
 
     it "should yield to a block" do

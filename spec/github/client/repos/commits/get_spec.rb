@@ -34,7 +34,7 @@ describe Github::Client::Repos::Commits, '#get' do
 
     it "should get commit information" do
       commit = subject.get user, repo, sha
-      commit.commit.author.name.should == 'Monalisa Octocat'
+      commit['commit']['author']['name'].should == 'Monalisa Octocat'
     end
 
     it "should return mash" do

@@ -29,7 +29,7 @@ RSpec.describe Github::Client::Orgs::Memberships, '#get' do
 
     it "gets organization information" do
       org_response = subject.get(org, username: username)
-      expect(org_response.state).to eq('active')
+      expect(org_response['state']).to eq('active')
     end
   end
 

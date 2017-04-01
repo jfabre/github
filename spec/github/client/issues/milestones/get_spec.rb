@@ -34,8 +34,8 @@ describe Github::Client::Issues::Milestones, '#get' do
 
     it "should get milestone information" do
       milestone = subject.get user, repo, milestone_id
-      milestone.number.should == milestone_id
-      milestone.title.should == 'v1.0'
+      milestone['number'].should == milestone_id
+      milestone['title'].should == 'v1.0'
     end
 
     it "should return mash" do

@@ -27,7 +27,7 @@ RSpec.describe Github::Client::Gists, '#forks' do
 
     it "gets gist forks information" do
       forks = subject.forks(1)
-      expect(forks.first.user.login).to eq('octocat')
+      expect(forks.first['user']['login']).to eq('octocat')
     end
 
     it "yields to a block" do

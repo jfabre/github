@@ -22,12 +22,12 @@ RSpec.describe Github::Client::Orgs::Memberships, '#create' do
 
     it 'should create organization membership with pending state' do
       response = subject.create(orgname, username, inputs)
-      expect(response.state).to eq('pending')
+      expect(response['state']).to eq('pending')
     end
 
     it 'should create organization membership with role member' do
       response = subject.create orgname, username, inputs
-      expect(response.role).to eq('member')
+      expect(response['role']).to eq('member')
     end
 
     it "failse without role option" do
@@ -46,12 +46,12 @@ RSpec.describe Github::Client::Orgs::Memberships, '#create' do
 
     it 'should create organization membership with active state' do
       response = subject.create(orgname, username, inputs)
-      expect(response.state).to eq('active')
+      expect(response['state']).to eq('active')
     end
 
     it 'should update organization membership with role admin' do
       response = subject.create(orgname, username, inputs)
-      expect(response.role).to eq('admin')
+      expect(response['role']).to eq('admin')
     end
   end
 end # create

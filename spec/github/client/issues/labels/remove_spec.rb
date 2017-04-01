@@ -31,12 +31,12 @@ describe Github::Client::Issues::Labels, '#remove' do
 
     it "should return the resource" do
       labels = subject.remove user, repo, number, :label_name => label_name
-      labels.first.should be_a Hashie::Mash
+      labels.first.should be_a Hash
     end
 
     it "should get the label information" do
       labels = subject.remove user, repo, number, :label_name => label_name
-      labels.first.name.should == 'bug'
+      labels.first['name'].should == 'bug'
     end
   end
 

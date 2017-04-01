@@ -32,7 +32,7 @@ describe Github::Client::GitData::Tags, '#get' do
 
     it "should get tag information" do
       tag = subject.get user, repo, sha
-      tag.tag.should eql "v0.0.1"
+      tag['tag'].should eql "v0.0.1"
     end
 
     it "should return mash" do

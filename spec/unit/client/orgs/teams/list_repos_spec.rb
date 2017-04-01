@@ -32,7 +32,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#list_repos' do
 
     it "gets teams information" do
       team_repos = subject.list_repos team_id
-      expect(team_repos.first.name).to eq('github')
+      expect(team_repos.first['name']).to eq('github')
     end
 
     it "yields to a block" do

@@ -33,7 +33,7 @@ describe Github::Client::Users::Followers, '#list' do
 
     it "should get followers information" do
       followers = subject.list user
-      followers.first.login.should == 'octocat'
+      followers.first['login'].should == 'octocat'
     end
 
     it "should yield to a block" do

@@ -45,7 +45,7 @@ describe Github::Client::Users::Keys, '#update' do
 
     it "should get the key information" do
       key = subject.update key_id, inputs
-      key.title.should == 'octocat@octomac'
+      key['title'].should == 'octocat@octomac'
     end
   end
 

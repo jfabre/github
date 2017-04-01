@@ -31,7 +31,7 @@ describe Github::Client::Gitignore, '#get' do
 
     it "should get key information" do
       temp = subject.get template
-      temp.name.should == "C"
+      temp['name'].should == "C"
     end
   end
 

@@ -43,7 +43,7 @@ describe Github::Client::Repos, '#create' do
 
       it "should return the resource" do
         repository = subject.create inputs
-        repository.name.should == 'Hello-World'
+        repository['name'].should == 'Hello-World'
       end
 
       it "should return mash type" do

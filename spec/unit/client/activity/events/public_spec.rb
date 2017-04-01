@@ -27,7 +27,7 @@ describe Github::Client::Activity::Events, '#public' do
 
     it "should get event information" do
       events = subject.public
-      expect(events.first.type).to eq('Event')
+      expect(events.first['type']).to eq('Event')
     end
 
     it "should yield to a block" do

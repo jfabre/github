@@ -33,12 +33,12 @@ describe Github::Client::Issues::Labels, '#replace' do
 
     it "should return the resource" do
       labels = subject.replace user, repo, number, label
-      labels.first.should be_a Hashie::Mash
+      labels.first.should be_a Hash
     end
 
     it "should get the label information" do
       labels = subject.replace user, repo, number, label
-      labels.first.name.should == 'bug'
+      labels.first['name'].should == 'bug'
     end
   end
 

@@ -33,7 +33,7 @@ describe Github::Client::GitData::Blobs, '#get' do
 
     it "should get blob information" do
       blob = subject.get user, repo, sha
-      blob.content.should eql "Content of the blob"
+      blob['content'].should eql "Content of the blob"
     end
 
     it "should return mash" do

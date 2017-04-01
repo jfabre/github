@@ -45,7 +45,7 @@ RSpec.describe Github::Client::PullRequests, '#create' do
 
     it "should get the request information" do
       pull_request = subject.create user, repo, inputs
-      expect(pull_request.title).to eql "new-feature"
+      expect(pull_request['title']).to eql "new-feature"
     end
   end
 

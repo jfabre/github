@@ -47,7 +47,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#create' do
 
     it "gets the team information" do
       team = subject.create(org, inputs)
-      expect(team.name).to eq('Owners')
+      expect(team['name']).to eq('Owners')
     end
   end
 

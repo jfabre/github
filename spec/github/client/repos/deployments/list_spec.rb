@@ -35,7 +35,7 @@ describe Github::Client::Repos::Deployments, '#list' do
 
     it "should get deployment information" do
       deploys = subject.list user, repo
-      deploys.first.description.should == 'Test deploy'
+      deploys.first['description'].should == 'Test deploy'
     end
 
     it "should yield to a block" do

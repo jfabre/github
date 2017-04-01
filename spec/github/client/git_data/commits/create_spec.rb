@@ -66,7 +66,7 @@ describe Github::Client::GitData::Commits, '#get' do
 
     it "should get the commit information" do
       commit = subject.create user, repo, inputs
-      commit.author.name.should eql "Scott Chacon"
+      commit['author']['name'].should eql "Scott Chacon"
     end
   end
 

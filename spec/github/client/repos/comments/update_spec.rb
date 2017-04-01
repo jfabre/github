@@ -37,7 +37,7 @@ describe Github::Client::Repos::Comments, '#update' do
 
     it "should get the commit comment information" do
       comment = subject.update user, repo, comment_id, inputs
-      comment.user.login.should == 'octocat'
+      comment['user']['login'].should == 'octocat'
     end
   end
 

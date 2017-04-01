@@ -32,8 +32,8 @@ RSpec.describe Github::Client::PullRequests, '#get' do
 
     it "should get pull_request information" do
       pull_request = subject.get user, repo, number
-      expect(pull_request.number).to eq number
-      expect(pull_request.head.user.login).to eq('octocat')
+      expect(pull_request['number']).to eq number
+      expect(pull_request['head']['user']['login']).to eq('octocat')
     end
 
     it "should return mash" do

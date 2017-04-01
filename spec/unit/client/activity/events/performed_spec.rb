@@ -32,7 +32,7 @@ describe Github::Client::Activity::Events, '#performed' do
 
     it "should get event information" do
       events = subject.performed user
-      expect(events.first.type).to eq('Event')
+      expect(events.first['type']).to eq('Event')
     end
 
     it "should yield to a block" do
@@ -56,7 +56,7 @@ describe Github::Client::Activity::Events, '#performed' do
 
     it "should get event information" do
       events = subject.performed user, :public => true
-      expect(events.first.type).to eq('Event')
+      expect(events.first['type']).to eq('Event')
     end
 
     it "should yield to a block" do

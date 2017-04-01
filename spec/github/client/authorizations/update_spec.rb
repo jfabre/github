@@ -37,7 +37,7 @@ RSpec.describe Github::Client::Authorizations, '#update' do
 
     it "should get the authorization information" do
       authorization = subject.update authorization_id, inputs
-      authorization.token.should == 'abc123'
+      authorization['token'].should == 'abc123'
     end
   end
 

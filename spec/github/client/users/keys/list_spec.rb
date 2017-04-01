@@ -33,7 +33,7 @@ describe Github::Client::Users::Keys, '#list' do
 
     it "should get keys information" do
       keys = subject.list
-      keys.first.id.should == key_id
+      keys.first['id'].should == key_id
     end
 
     it "should yield to a block" do
@@ -65,7 +65,7 @@ describe Github::Client::Users::Keys, '#list' do
 
     it "should get keys information" do
       keys = subject.list :user => user
-      keys.first.id.should == key_id
+      keys.first['id'].should == key_id
     end
 
     it "should yield to a block" do

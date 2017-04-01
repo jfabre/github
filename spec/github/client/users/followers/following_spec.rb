@@ -28,7 +28,7 @@ describe Github::Client::Users::Followers, '#following' do
 
     it "should get following users information" do
       followings = subject.following user
-      followings.first.login.should == 'octocat'
+      followings.first['login'].should == 'octocat'
     end
 
     it "should yield to a block" do

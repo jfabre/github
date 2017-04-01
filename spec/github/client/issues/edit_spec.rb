@@ -50,7 +50,7 @@ describe Github::Client::Issues, '#edit' do
 
     it "should be able to retrieve information" do
       issue = subject.edit user, repo, issue_id, inputs
-      issue.title.should == 'Found a bug'
+      issue['title'].should == 'Found a bug'
     end
   end
 

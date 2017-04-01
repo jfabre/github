@@ -37,7 +37,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#add_membership' do
       it "adds resource successfully" do
         response = subject.add_membership team_id, user
         expect(a_put(request_path)).to have_been_made
-        expect(response.state).to eq('active')
+        expect(response['state']).to eq('active')
       end
 
     end
@@ -48,7 +48,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#add_membership' do
       it "adds resource successfully" do
         response = subject.add_membership team_id, user
         expect(a_put(request_path)).to have_been_made
-        expect(response.state).to eq('pending')
+        expect(response['state']).to eq('pending')
       end
     end
   end

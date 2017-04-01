@@ -30,7 +30,8 @@ describe Github::Client::Search::Legacy, '#repos' do
 
     it "should get repository information" do
       repos = subject.repos keyword: keyword
-      repos.repositories.first.username.should == 'mathiasbynens'
+      repos['repositories'].first['username'].should == 'mathiasbynens'
+
     end
   end
 end

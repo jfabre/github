@@ -28,7 +28,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#list' do
 
     it "gets teams information" do
       teams = subject.list(org: org)
-      expect(teams.first.name).to eq('Owners')
+      expect(teams.first['name']).to eq('Owners')
     end
 
     it "yields to a block" do
@@ -56,7 +56,7 @@ RSpec.describe Github::Client::Orgs::Teams, '#list' do
 
     it "gets teams information" do
       teams = subject.list
-      expect(teams.first.name).to eq('Owners')
+      expect(teams.first['name']).to eq('Owners')
     end
 
     it "yields to a block" do

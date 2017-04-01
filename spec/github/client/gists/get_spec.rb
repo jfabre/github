@@ -31,7 +31,7 @@ RSpec.describe Github::Client::Gists, '#get' do
     it "gets gist information" do
       gist = subject.get gist_id
       expect(gist.id.to_i).to eq gist_id
-      expect(gist.user.login).to eq('octocat')
+      expect(gist['user']['login']).to eq('octocat')
     end
 
     it "returns response wrapper" do

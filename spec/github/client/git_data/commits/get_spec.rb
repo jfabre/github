@@ -34,7 +34,7 @@ describe Github::Client::GitData::Commits, '#get' do
 
     it "should get commit information" do
       commit = subject.get user, repo, sha
-      commit.author.name.should eql "Scott Chacon"
+      commit['author']['name'].should eql "Scott Chacon"
     end
 
     it "should return mash" do

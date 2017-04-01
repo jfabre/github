@@ -38,7 +38,7 @@ describe Github::Client::Repos::Collaborators, '#list' do
 
     it "should get collaborator information" do
       collaborators = subject.list user, repo
-      collaborators.first.login.should == 'octocat'
+      collaborators.first['login'].should == 'octocat'
     end
 
     it "should yield to a block" do

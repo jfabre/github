@@ -38,7 +38,7 @@ describe Github::Client::Repos::Releases::Assets, '#list' do
 
     it "should get asset information" do
       assets = subject.list owner, repo, id
-      expect(assets.first.name).to eq 'example.zip'
+      expect(assets.first['name']).to eq 'example.zip'
     end
 
     it "should yield to a block" do

@@ -35,7 +35,7 @@ describe Github::Client::Issues::Milestones, '#list' do
 
     it "should get issue information" do
       milestones = subject.list user, repo
-      milestones.first.title.should == 'v1.0'
+      milestones.first['title'].should == 'v1.0'
     end
 
     it "should yield to a block" do

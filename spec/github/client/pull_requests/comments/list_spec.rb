@@ -38,7 +38,7 @@ RSpec.describe Github::Client::PullRequests::Comments, '#list' do
 
     it "gets pull request comment information" do
       comments = subject.list user, repo, number: number
-      expect(comments.first.id).to eq(number)
+      expect(comments.first['id']).to eq(number)
     end
 
     it "yields to a block" do
@@ -60,7 +60,7 @@ RSpec.describe Github::Client::PullRequests::Comments, '#list' do
 
     it "gets pull request comment information" do
       comments = subject.list user, repo
-      expect(comments.first.id).to eq(number)
+      expect(comments.first['id']).to eq(number)
     end
 
     it "yields to a block" do

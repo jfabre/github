@@ -25,6 +25,6 @@ describe Github::Client::Repos::Contents, '#readme' do
 
   it "should get readme information" do
     readme = subject.readme user, repo
-    readme.name.should == 'README.md'
+    readme['name'].should == 'README.md'
   end
 end

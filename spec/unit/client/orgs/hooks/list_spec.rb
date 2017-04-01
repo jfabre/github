@@ -32,7 +32,7 @@ RSpec.describe Github::Client::Orgs::Hooks, '#list' do
 
     it "gets hook information" do
       hooks = subject.list(org)
-      expect(hooks.first.name).to eq('web')
+      expect(hooks.first['name']).to eq('web')
     end
 
     it "yields to a block" do
